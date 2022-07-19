@@ -1,0 +1,8 @@
+<h2><%= "#{@recipe.name}" %> Ingredients </h2>
+
+<ul>
+<% @ingredients.each do |ingredient| %>
+  <li><%= ingredient.name %></li>
+<% end %>
+<li>Total Cost: <%= @recipe.total_cost(@ingredients) %></li>
+</ul>
